@@ -1,0 +1,22 @@
+.home-buttons, .home-buttons p {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.home-buttons .md-button {
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .home-buttons, .home-buttons p {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .home-buttons .md-button {
+    display: block;
+    width: 100%;
+  }
+}

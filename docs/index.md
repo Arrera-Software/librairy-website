@@ -4,6 +4,8 @@ Bienvenue sur la documentation officielle d'Arrera. Ce site regroupe les ressour
 
 Choisissez une section ci-dessous pour commencer :
 
+<div class="home-buttons" markdown="1">
 [Arrera Tk](arreratk.md){ .md-button .md-button--primary }
 [Arrera QT](arreraqt.md){ .md-button .md-button--primary }
-[new_Pycozmo](pycozmo.md){ .md-button .md-button--primary}
+[new_Pycozmo](pycozmo.md){ .md-button .md-button--primary }
+</div>
