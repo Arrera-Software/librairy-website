@@ -1,3 +1,26 @@
-site_name: Documentation Arrera
+site_name: Arrera Librairy
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
+nav:
+  - home: index.md
+  - ArreraTk: arreratk.md
+  - ArreraQT: arreraqt.md
+  - new_Pycozmo: pycozmo.md
+
+markdown_extensions:
+  - attr_list
