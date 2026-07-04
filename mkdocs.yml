@@ -1,6 +1,8 @@
 site_name: Arrera Librairy
 theme:
   name: material
+  logo: assets/logo.webp
+  favicon: assets/logo.webp
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
