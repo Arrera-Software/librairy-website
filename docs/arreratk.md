@@ -8,7 +8,42 @@
 
 ## Installation
 
-*(To be completed)*
+### Via PyPI (Recommended)
+
+You can easily install `arrera-tk` from PyPI using `pip`:
+
+```bash
+pip install arrera-tk
+```
+
+### From GitHub (Source / Build)
+
+If you want to install the latest version directly from the source repository or build/compile it yourself:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Arrera-Librairy/Arrera-TK.git
+   cd Arrera-TK
+   ```
+
+2. **Install using `pip`:**
+   You can install the package directly from the source directory:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Build and compile (Optional):**
+   If you want to build the distribution packages (wheel and source distribution) yourself:
+   First, make sure you have `build` installed:
+   
+   Then build/compile the package:
+   ```bash
+   python -m build
+   ```
+   Once built, you can install the generated wheel file:
+   ```bash
+   pip install dist/*.whl
+   ```
 
 ## Widgets
 
