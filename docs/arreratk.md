@@ -8,42 +8,9 @@
 
 ## Installation
 
-### Via PyPI (Recommended)
-
-You can easily install `arrera-tk` from PyPI using `pip`:
-
 ```bash
 pip install arrera-tk
 ```
-
-### From GitHub (Source / Build)
-
-If you want to install the latest version directly from the source repository or build/compile it yourself:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Arrera-Librairy/Arrera-TK.git
-   cd Arrera-TK
-   ```
-
-2. **Install using `pip`:**
-   You can install the package directly from the source directory:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Build and compile (Optional):**
-   If you want to build the distribution packages (wheel and source distribution) yourself:
-   First, make sure you have `build` installed:
-   
-   Then build/compile the package:
-   ```bash
-   python -m build
-   ```
-   Once built, you can install the generated wheel file:
-   ```bash
-   pip install dist/*.whl
-   ```
 
 ## Widgets
 
@@ -52,6 +19,7 @@ The main window class for the application.
 
 **Initialization:**
 `aTk(title: str = "ArreraTK", width: int = 800, height: int = 600, resizable: bool = False, icon: str = "", theme: str = "defaut", **kwargs)`
+
 - `title`: The title of the window.
 - `width`: Window width.
 - `height`: Window height.
@@ -67,6 +35,7 @@ A secondary window (toplevel) class.
 
 **Initialization:**
 `aTopLevel(title: str = "Arrera TopLevel", width: int = 400, height: int = 300, resizable: bool = False, icon: str = "", **kwargs)`
+
 - `title`: The title of the secondary window.
 - `width`: Window width.
 - `height`: Window height.
@@ -81,6 +50,7 @@ A customizable button widget.
 
 **Initialization:**
 `aButton(master, text: str = "Arrera Button", width: int = 140, height: int = 40, command=None, size: int = 0, dark_color: str = "", light_color: str = "", light_text_color: str = "", dark_text_color: str = "", **kwargs)`
+
 - `master`: The parent widget.
 - `text`: The text displayed on the button.
 - `width`: Button width.
@@ -97,6 +67,7 @@ A label widget used to display text or images.
 
 **Initialization:**
 `aLabel(master, text: str = "Arrera Label", police_size: int = 0, dark_color: str = "", light_color: str = "", light_text_color: str = "", dark_text_color: str = "", image: CTkImage = None, **kwargs)`
+
 - `master`: The parent widget.
 - `text`: Text to display.
 - `police_size`: Font size.
@@ -111,10 +82,31 @@ An image widget that supports light and dark modes.
 
 **Initialization:**
 `aImage(width: int, height: int, path_light: str, path_dark: str = "")`
+
 - `width`: Image width.
 - `height`: Image height.
 - `path_light`: Path to the image file (used in light mode, and dark mode if `path_dark` is not provided).
 - `path_dark`: Path to the image file used in dark mode.
+
+---
+
+### `aLabelImage`
+A widget that combines an image and a text label side by side.
+
+**Initialization:**
+`aLabelImage(master, text: str = "Arrera Label", path_img_light: str = "", path_img_dark: str = "", police_size: int = 0, widht_img: int = 15, height_img: int = 15, **kwargs)`
+
+- `master`: The parent widget.
+- `text`: Text to display.
+- `path_img_light`: Path to light mode image.
+- `path_img_dark`: Path to dark mode image.
+- `police_size`: Font size for the text.
+- `widht_img`: Image width.
+- `height_img`: Image height.
+
+**Methods:**
+- `change_text(new_text: str)`: Updates the text.
+- `change_img(path_img_light: str = "", path_img_dark: str = "", widht_img: int = 15, height_img: int = 15)`: Updates the image.
 
 ---
 
@@ -257,6 +249,24 @@ A set of option menus for selecting hours and minutes.
 
 ---
 
+### `aDateSelector`
+A date selector widget with day, month, and year option menus.
+
+**Initialization:**
+`aDateSelector(master, start_year: int = 1900, end_year: int = 2100, month_format: str = "number", bg: str = "", fg: str = "", command=None, **kwargs)`
+
+- `master`: The parent widget.
+- `start_year`: The earliest year available.
+- `end_year`: The latest year available.
+- `month_format`: `"number"` (e.g. 01 to 12) or `"letter"` (e.g. January).
+- `command`: Callback function triggered on date change.
+
+**Methods:**
+- `get_date()`: Returns the selected date as a string (YYYY-MM-DD).
+- `get_date_dict()`: Returns the selected date as a dictionary (`{"day": int, "month": int, "year": int}`).
+
+---
+
 ### `aFrame`
 A frame container widget.
 
@@ -286,6 +296,7 @@ A canvas widget for drawing shapes and custom graphics.
 All widgets inheriting from `placement_Tool_Kit_internet` (most widgets in this library) also support various layout utility methods for easier positioning.
 
 **Placement Methods:**
+
 - `placeCenter()`: Places the widget exactly in the center of its parent.
 - `placeLeftCenter()`: Places the widget vertically centered on the left edge.
 - `placeRightCenter()`: Places the widget vertically centered on the right edge.
@@ -304,8 +315,10 @@ All widgets inheriting from `placement_Tool_Kit_internet` (most widgets in this 
 - `placeBottomCenterNoStick()`: Places the widget at the bottom-center with some padding (y=-10).
 
 **Pack Methods:**
+
 - `pack(xExpand: bool = False, yExpand: bool = False, **kwargs)`: Standard pack with optional horizontal (`xExpand`) and vertical (`yExpand`) expansion.
 - `packLeft(xExpand: bool = False, yExpand: bool = False, **kwargs)`: Packs the widget to the left side (`side="left"`).
 - `packRight(xExpand: bool = False, yExpand: bool = False, **kwargs)`: Packs the widget to the right side (`side="right"`).
 - `packTop(xExpand: bool = False, yExpand: bool = False, **kwargs)`: Packs the widget to the top side (`side="top"`).
 - `packBottom(xExpand: bool = False, yExpand: bool = False, **kwargs)`: Packs the widget to the bottom side (`side="bottom"`).
+
