@@ -10,6 +10,6 @@ Specializing in Python and C++ (Qt) environments, we develop robust and reusable
 ___
 <div class="home-buttons" markdown="1">
 [Arrera Tk](arreratk.md){ .md-button .md-button--primary }
-<!-- [Arrera QT](arreraqt.md){ .md-button .md-button--primary }-->
+[Arrera QT](arreraqt.md){ .md-button .md-button--primary }
 [nexo_Pycozmo](pycozmo.md){ .md-button .md-button--primary } 
 </div>

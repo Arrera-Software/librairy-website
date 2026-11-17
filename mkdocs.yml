@@ -21,8 +21,8 @@ theme:
 nav:
   - home: index.md
   - ArreraTk: arreratk.md
-  #- ArreraQT: arreraqt.md
-  #- new_Pycozmo: pycozmo.md
+  - ArreraQT: arreraqt.md
+  - new_Pycozmo: pycozmo.md
 
 markdown_extensions:
   - attr_list
